@@ -12,46 +12,48 @@
     <h1> HEALTH CONCERNS</h1>
     <nav>
         <ul>
-            <li><a href="#">Contact</a></li>
+            <li><a href="assignment1.html">Contact</a></li>
         </ul>
     </nav>
 </header>
-
-<body>
-    <div class="form-section">
-        <p><b>REGISTRATION FORM</b></p>
-        <form action="#" method="post">
+<div>
+    <p><i><b>Unlock Your Health Potential - Join Our Community for Exclusive Tips & Insights!</b></i></p>
+    <h2>Form</h2>
+    <form action="/submit-your-form-handler" method="post">
+        <div>
             <label for="name">Name</label>
-            <input type="text" id="name" name="name">
-
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div>
             <label for="email">Email</label>
-            <input type="email" id="email" name="email">
-
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div>
             <label for="genre">Favourite Genre</label>
-            <input list="genres" id="genre" name="genre">
-            <datalist id="genres">
-                <option value="MEDITATION">
-                <option value="DIET">
-                <option value="YOGA">
-                <option value="ZOOMBA">
-                <option value="ALL"></option>
-            </datalist>
+            <select id="genre" name="genre" required>
+                <option value=" "> </option>
+                <option value="Meditation">Meditation</option>
+                <option value="Yoga">Yoga</option>
+                <option value="Aerobics">Aerobics</option>
+                <option value="Martial Arts">Martial Arts</option>
+                <option value="Gym">Gym</option>
+                <option value="All">All</option>
+            </select>
+        </div>
+        <div>
+            <input type="checkbox" id="newsletter" name="newsletter">
+            <label for="newsletter">Subscribe to our newsletter via email</label>
+        </div>
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
 
-            <label for="subscribe">
-                <input type="checkbox" id="subscribe" name="subscribe"> Subscribe to our newsletter via email
-            </label>
-
-            <button type="submit">Submit</button><br>
-            <div class="content">
-                <!-- Your content goes here -->
-            </div>
-            <footer>
-                <p>&copy; All rights reserved.</p>
-            </footer>
-
-
-        </form>
+    <div class="footer">
+        &copy; All rights reserved.
     </div>
+</div>
+
 </body>
 
 </html>
