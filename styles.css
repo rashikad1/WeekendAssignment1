@@ -1,34 +1,41 @@
 /* styles.css */
-body,
-html {
+body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
 }
 
 header {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    padding: 1rem;
-    background-color: #110f0e;
-    color: rgb(247, 243, 243);
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
 }
 
 header .logo {
-    height: 100px;
-    width: 100px;
+    width: 50px;
 }
 
-header nav a {
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
     color: white;
     text-decoration: none;
-    margin-left: 1rem;
 }
 
 .background {
     position: relative;
-    background: url('Background-compressed.jpg') no-repeat center center/cover;
+    background: url('background.jpg') no-repeat center center/cover;
     height: 100vh;
     opacity: 0.8;
 }
@@ -39,63 +46,82 @@ header nav a {
     padding: 20px;
     text-align: center;
 }
-.image-text img {
-    width: 350px;
-    margin-right: 20px;
-}
-
 
 .image-text {
     display: flex;
     align-items: center;
-    justify-content: center;
     margin: 20px 0;
     margin-top: auto;
 }
 
+.image-text img {
+    width: 200px;
+    margin-right: 20px;
+}
 
 .video iframe {
     width: 100%;
-    height: 300px;
+    height: 400px;
 }
 
 footer {
-    background-color: hsl(310, 49%, 50%);
-    color: rgb(37, 37, 19);
+    background-color: #333;
+    color: white;
     text-align: center;
-    padding: 5px 0;
-    position: fixed;
+    padding: 10px 0;
+    position: relative;
     bottom: 0;
     width: 100%;
 }
 
-form {
-    background: #86bd08;
+.form-section {
+    background-color: #f9f9f9;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(48, 37, 37, 0.1);
-}
-
-input[type=text],
-input[type=email],
-select {
-    width: 100%;
-    padding: 10px;
-    margin: 5px 0;
-    display: inline-block;
-    border: 1px solid #fcfbfb;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-input[type=checkbox] {
-    margin-right: 10px;
-}
-
-.footer {
-    background-color: rgb(45, 164, 201);
     text-align: center;
+}
+
+.form-section form {
+    display: inline-block;
+    text-align: left;
+}
+
+.form-section label {
+    display: block;
+    margin-top: 10px;
+}
+
+.form-section input, .form-section button {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+.form-section button {
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
     margin-top: 20px;
-    font-size: 14px;
-    color: #0a0909;
+}
+
+.form-section button:hover {
+    background-color: #555;
+
+}
+.content {
+    flex: 1; /* Allow the content to take up remaining space */
+    padding-bottom: 20px; /* Add some padding to the bottom of the content */
+}
+footer {
+    background-color: #333;  /* Dark background color */
+    color: #fff;             /* White text color */
+    text-align: center;      /* Center align the text */
+    padding: 20px 0;         /* Vertical padding for the footer */
+    width: 100%;             /* Make the footer take the full width */
+    margin-top: auto;        /* Push footer to the bottom */
+}
+
+footer p {
+    margin: 0;              /* Remove default margin */
+    font-size: 14px;        /* Set font size */
 }
